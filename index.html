@@ -1,8 +1,8 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <title>Pitch Detector</title>
-  <link href='http://fonts.googleapis.com/css?family=Alike' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alike' rel='stylesheet' type='text/css'>
   <style>
     body { font: 14pt 'Alike', sans-serif;}
     #note { font-size: 164px; }
@@ -22,9 +22,8 @@
 <body>
 <script src="js/pitchdetect.js"></script>
 
-<p><button onclick="startPitchDetect();">Start</button></p>
+<p><button onclick="driver();">Start</button></p>
 <p>
-  <button onclick="this.innerText = togglePlayback()">use demo audio</button>
   <button onclick="toggleLiveInput()">use live input</button>
   <button onclick="toggleOscillator()">use oscillator</button>
   <!--<button onclick="updatePitch(0);">sample</button>-->
@@ -40,18 +39,19 @@
 <!-- just used for debugging
 <canvas id="waveform" width="512" height="256"></canvas>
 -->
-<a href="https://github.com/cwilso/pitchdetect" style="position: absolute; z-index:2; top: 0; right: 0; border: 0;"><img src="img/forkme.png" alt="Fork me on GitHub"></a>
 
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
+  const _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-35593052-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    const ga = document.createElement('script');
+    ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    const s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
   })();
 </script>
 </body>
